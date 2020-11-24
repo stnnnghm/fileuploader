@@ -112,13 +112,6 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		}
 		defer dst.Close()
 
-		// Copy the uploaded file to the filesystem at the specified destination
-		_, err = io.Copy(dst, file)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
 		pr := &Progress{
 			TotalSize: fileHeader.Size,
 		}
