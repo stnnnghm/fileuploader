@@ -1,0 +1,1 @@
+Clone this repo to your computer and run go run main.go to start the server on PORT 4500.
